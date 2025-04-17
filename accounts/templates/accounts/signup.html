@@ -1,0 +1,15 @@
+{% extends "base_layout.html" %}
+{% block content %}
+     {% load static %}
+<main>
+    <div class="test col-lg-7 mb-5" style="display: flex;flex-direction: column;align-items: center;">
+        <h1>Signup</h1>
+         <img src="{% static '/img/signup.jpg' %}" class="navbar-brand mb-3" style="width: 35%; border-radius: 15px; align-self: center">
+        <form class="form" action="{% url 'accounts:signup' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button class="logout-button mt-2" type="submit">Sign up</button>
+        </form>
+    </div>
+</main>
+{% endblock %}

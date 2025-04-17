@@ -1,0 +1,162 @@
+main{
+    display: flex;
+    justify-content: center;
+}
+.test {
+    max-width: 1080px;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.article__item {
+    padding: 15px;
+    border-bottom: 1px solid #bfbff3;
+}
+
+.article__item:last-child {
+    border-bottom: none;
+}
+
+.article__item h2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.article__item h2 a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.article-detail p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px;
+}
+
+.navbar-brand{
+    width: 70px;
+}
+
+nav{
+    font-size: 18px;
+}
+.menu li a::after {
+    content: '';
+    display: block;
+    background-color: black;
+    height: 1px;
+    transition: all .3s;
+    transform: scale(0);
+}
+.menu li a:hover::after{
+    transform: scale(1);
+}
+.article-detail{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.article-detail img{
+    justify-self: center;
+    height: 20vw;
+}
+.P{
+    text-align: center;
+}
+
+form.form.nav-link.active {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.logout-button {
+  padding: 6px 13px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #e40303;
+}
+
+.nav-link{
+    margin-right: 8px;;
+}
+
+.test ul {
+    margin-left: 5px;
+    list-style: none;
+    padding-left: 0;
+}
+/* формы */
+
+.test {
+    padding: 40px;
+}
+
+.test h1 {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.test form {
+    width: 80%;
+}
+
+.test label {
+    font-weight: 600;
+}
+
+.test input[type="text"],
+.test input[type="password"] {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.helptext {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.errorlist {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin: 5px 0 10px;
+}
+
+.form button:hover,
+.test input[type="submit"]:hover {
+    background-color: #314a85;
+    transform: translateY(-1px);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* для create atricle */
+
+.test textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.test input[type="file"] {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+

@@ -1,0 +1,21 @@
+{% extends "base_layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+    <div class="container-fluid col-lg-10">
+        <h1>{{ header }}</h1>
+        <p class="P">Director : {{director.name}}</p>
+        <p class="P">Address : {{address.0}}, {{address.1}}, {{address.2}}, {{address.3}},</p>
+        <p class="P">Staff : {{staff.0}}, {{staff.1}}, {{staff.2}},</p>
+        <div style="border-radius: 20px;overflow: hidden;">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A435724ad2506a298ff0e0b278531857fb0278932cff1c12c4bd7292f141b024d&amp;width=100%25&amp;height=500px&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock content %}

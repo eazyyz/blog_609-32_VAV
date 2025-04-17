@@ -1,0 +1,46 @@
+{% extends "base_layout.html" %}
+{% block title %}Article List{% endblock title %}
+{% block content %}
+<main>
+    <div class="test col-lg-7 mb-5">
+    <h1>Article List</h1>
+    <nav>
+        <ul>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <form class="form nav-link active " action="{% url 'accounts:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="logout-button">Logout</button>
+                </form>
+                <a href="{% url 'articles:create' %}">
+                    <button type="submit" class="logout-button">Create atricle</button>
+                </a>
+            </li>
+            {% else %}
+            <li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #5d5df6; font-weight: bold" href="{% url 'accounts:login' %}">Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="articles">
+        {% for element in articles %}
+        <div class="article__item">
+            <h2>
+                <a href="{% url 'articles:article_detail' slug=element.slug %}">
+                    {{ element.title }}
+                </a>
+            </h2>
+            <p>
+                {{element.snippet}}
+            </p>
+            <time>
+                {{element.date}}
+            </time>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+</main>
+{% endblock content %}
