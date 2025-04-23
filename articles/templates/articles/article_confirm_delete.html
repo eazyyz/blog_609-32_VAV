@@ -2,14 +2,16 @@
 {% load static %}
 {% block title %}Create article{% endblock title %}
 {% block content %}
+    <div class="article_confirm_delete">
     <div style="display: flex; ;justify-content: center">
         <div class="test col-lg-7 mb-5" style="display: flex;flex-direction: column;align-items: center;">
-            <h1>Create article</h1>
-            <form class="form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
+            <h1 class="mb-3">Are you sure?</h1>
+            <form class="form" method="post">
                 {% csrf_token %}
-                {{ form }}
-                <button class="logout-button" type="submit">Create article</button>
+                <button type="submit" class="btn btn-danger">Yes</button>
+                <a href="{% url 'homepage' %}" class="btn btn-secondary">Cancel</a>
             </form>
         </div>
+    </div>
     </div>
 {% endblock content %}
